@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.apache.dubbo.demo";
+option java_outer_classname = "demoProto";
+option objc_class_prefix = "demo";
+
+package demo;
+
+// 请求体
+message HelloRequest {
+  string name = 1;
+}
+
+// 响应体
+message HelloReply {
+  string message = 1;
+}
+
+// The demo service definition.
+service demoService {
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
