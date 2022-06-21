@@ -8,11 +8,11 @@ package org.apache.dubbo.demo;
  * 响应体
  * </pre>
  *
- * Protobuf type {@code oapb.HelloResp}
+ * Protobuf type {@code demopb.HelloResp}
  */
 public  final class HelloResp extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:oapb.HelloResp)
+    // @@protoc_insertion_point(message_implements:demopb.HelloResp)
     HelloRespOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use HelloResp.newBuilder() to construct.
@@ -74,13 +74,13 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.apache.dubbo.demo.demoProto.internal_static_oapb_HelloResp_descriptor;
+    return org.apache.dubbo.demo.demoProto.internal_static_demopb_HelloResp_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.apache.dubbo.demo.demoProto.internal_static_oapb_HelloResp_fieldAccessorTable
+    return org.apache.dubbo.demo.demoProto.internal_static_demopb_HelloResp_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             org.apache.dubbo.demo.HelloResp.class, org.apache.dubbo.demo.HelloResp.Builder.class);
   }
@@ -278,21 +278,21 @@ private static final long serialVersionUID = 0L;
    * 响应体
    * </pre>
    *
-   * Protobuf type {@code oapb.HelloResp}
+   * Protobuf type {@code demopb.HelloResp}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:oapb.HelloResp)
+      // @@protoc_insertion_point(builder_implements:demopb.HelloResp)
       org.apache.dubbo.demo.HelloRespOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.dubbo.demo.demoProto.internal_static_oapb_HelloResp_descriptor;
+      return org.apache.dubbo.demo.demoProto.internal_static_demopb_HelloResp_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.dubbo.demo.demoProto.internal_static_oapb_HelloResp_fieldAccessorTable
+      return org.apache.dubbo.demo.demoProto.internal_static_demopb_HelloResp_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.dubbo.demo.HelloResp.class, org.apache.dubbo.demo.HelloResp.Builder.class);
     }
@@ -323,7 +323,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.apache.dubbo.demo.demoProto.internal_static_oapb_HelloResp_descriptor;
+      return org.apache.dubbo.demo.demoProto.internal_static_demopb_HelloResp_descriptor;
     }
 
     @java.lang.Override
@@ -506,10 +506,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:oapb.HelloResp)
+    // @@protoc_insertion_point(builder_scope:demopb.HelloResp)
   }
 
-  // @@protoc_insertion_point(class_scope:oapb.HelloResp)
+  // @@protoc_insertion_point(class_scope:demopb.HelloResp)
   private static final org.apache.dubbo.demo.HelloResp DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new org.apache.dubbo.demo.HelloResp();

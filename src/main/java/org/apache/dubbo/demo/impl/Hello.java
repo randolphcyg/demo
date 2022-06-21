@@ -1,11 +1,11 @@
 package org.apache.dubbo.demo.impl;
 
 import io.grpc.stub.StreamObserver;
-import org.apache.dubbo.demo.DubbooaClientGrpc;
+import org.apache.dubbo.demo.DubbodemoClientGrpc;
 import org.apache.dubbo.demo.HelloReq;
 import org.apache.dubbo.demo.HelloResp;
 
-public class Hello extends DubbooaClientGrpc.oaClientImplBase {
+public class Hello extends DubbodemoClientGrpc.demoClientImplBase {
     @Override
     public void sayHello(HelloReq request, StreamObserver<HelloResp> responseObserver) {
         System.out.println("获取输入值： " + request.getName());

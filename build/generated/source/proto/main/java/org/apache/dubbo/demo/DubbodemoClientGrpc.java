@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 import static org.apache.dubbo.common.constants.CommonConstants.DEFAULT_TIMEOUT;
 import static org.apache.dubbo.common.constants.CommonConstants.TIMEOUT_KEY;
 
-import static org.apache.dubbo.demo.oaClientGrpc.getServiceDescriptor;
+import static org.apache.dubbo.demo.demoClientGrpc.getServiceDescriptor;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
@@ -20,25 +20,25 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 @javax.annotation.Generated(
 value = "by DubboGrpc generator",
 comments = "Source: demo.proto")
-public final class DubbooaClientGrpc {
-private DubbooaClientGrpc() {}
+public final class DubbodemoClientGrpc {
+private DubbodemoClientGrpc() {}
 
-public static class DubbooaClientStub implements IoaClient {
+public static class DubbodemoClientStub implements IdemoClient {
 
 protected URL url;
 protected ReferenceConfigBase<?> referenceConfig;
 
-protected oaClientGrpc.oaClientBlockingStub blockingStub;
-protected oaClientGrpc.oaClientFutureStub futureStub;
-protected oaClientGrpc.oaClientStub stub;
+protected demoClientGrpc.demoClientBlockingStub blockingStub;
+protected demoClientGrpc.demoClientFutureStub futureStub;
+protected demoClientGrpc.demoClientStub stub;
 
-public DubbooaClientStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions, URL url, ReferenceConfigBase<?> referenceConfig) {
+public DubbodemoClientStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions, URL url, ReferenceConfigBase<?> referenceConfig) {
 this.url = url;
 this.referenceConfig = referenceConfig;
 
-blockingStub = oaClientGrpc.newBlockingStub(channel).build(channel, callOptions);
-futureStub = oaClientGrpc.newFutureStub(channel).build(channel, callOptions);
-stub = oaClientGrpc.newStub(channel).build(channel, callOptions);
+blockingStub = demoClientGrpc.newBlockingStub(channel).build(channel, callOptions);
+futureStub = demoClientGrpc.newFutureStub(channel).build(channel, callOptions);
+stub = demoClientGrpc.newStub(channel).build(channel, callOptions);
 }
 
     public org.apache.dubbo.demo.HelloResp sayHello(org.apache.dubbo.demo.HelloReq request) {
@@ -61,11 +61,11 @@ stub = oaClientGrpc.newStub(channel).build(channel, callOptions);
 
 }
 
-public static DubbooaClientStub getDubboStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions, URL url, ReferenceConfigBase<?> referenceConfig) {
-return new DubbooaClientStub(channel, callOptions, url, referenceConfig);
+public static DubbodemoClientStub getDubboStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions, URL url, ReferenceConfigBase<?> referenceConfig) {
+return new DubbodemoClientStub(channel, callOptions, url, referenceConfig);
 }
 
-public interface IoaClient {
+public interface IdemoClient {
     default public org.apache.dubbo.demo.HelloResp sayHello(org.apache.dubbo.demo.HelloReq request) {
     throw new UnsupportedOperationException("No need to override this method, extend XxxImplBase and override all methods it allows.");
     }
@@ -83,11 +83,11 @@ public interface IoaClient {
      *  rpc 客户端接口
      * </pre>
      */
-public static abstract class oaClientImplBase implements io.grpc.BindableService, IoaClient {
+public static abstract class demoClientImplBase implements io.grpc.BindableService, IdemoClient {
 
-private IoaClient proxiedImpl;
+private IdemoClient proxiedImpl;
 
-public final void setProxiedImpl(IoaClient proxiedImpl) {
+public final void setProxiedImpl(IdemoClient proxiedImpl) {
 this.proxiedImpl = proxiedImpl;
 }
 
@@ -103,13 +103,13 @@ this.proxiedImpl = proxiedImpl;
 
         public void sayHello(org.apache.dubbo.demo.HelloReq request,
         io.grpc.stub.StreamObserver<org.apache.dubbo.demo.HelloResp> responseObserver) {
-        asyncUnimplementedUnaryCall(org.apache.dubbo.demo.oaClientGrpc.getSayHelloMethod(), responseObserver);
+        asyncUnimplementedUnaryCall(org.apache.dubbo.demo.demoClientGrpc.getSayHelloMethod(), responseObserver);
         }
 
 @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
 return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
     .addMethod(
-    org.apache.dubbo.demo.oaClientGrpc.getSayHelloMethod(),
+    org.apache.dubbo.demo.demoClientGrpc.getSayHelloMethod(),
     asyncUnaryCall(
     new MethodHandlers<
     org.apache.dubbo.demo.HelloReq,
@@ -130,10 +130,10 @@ io.grpc.stub.ServerCalls.ClientStreamingMethod
 <Req, Resp>,
 io.grpc.stub.ServerCalls.BidiStreamingMethod
 <Req, Resp> {
-private final IoaClient serviceImpl;
+private final IdemoClient serviceImpl;
 private final int methodId;
 
-MethodHandlers(IoaClient serviceImpl, int methodId) {
+MethodHandlers(IdemoClient serviceImpl, int methodId) {
 this.serviceImpl = serviceImpl;
 this.methodId = methodId;
 }
