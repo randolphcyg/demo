@@ -21,7 +21,7 @@ https://my.oschina.net/randolphcyg/blog/5542229
 ## 2. 注意点
 
 - `pom.xml`里面是依赖，直接拿dubbo官方demo并修改的
-- `src/main/resources/spring/dubbo-provider.xml`里面不使用注册中心、注册了grpc的服务和端口
+- `src/main/resources/spring/demo.xml`里面不使用注册中心、注册了grpc的服务和端口
 - 其他配置文件不重要、不用管
 - 如果修改了protobuf文件，`/build`目录下的代码桩都要记得用插件编译更新下
 - go这边的pb文件也要同步修改接口并重新生成go代码桩

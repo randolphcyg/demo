@@ -25,7 +25,7 @@ import java.util.concurrent.CountDownLatch;
 public class Application {
     public static void main(String[] args) throws Exception {
 
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/dubbo-provider.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/demo.xml");
         context.start();
 
         System.out.println("【dubbo rpc 服务启动成功】");
