@@ -16,7 +16,7 @@ https://my.oschina.net/randolphcyg/blog/5542229
 
 1. IDEA配置好maven，用内置的也行
 2. 点击maven-插件-protobuf-protobuf:compile 会根据`src/main/proto/demo.proto`编译出代码桩到`/build`目录下
-3. 然后项目根目录`mvn compile`编译项目，检查`/src/java下面的代码依赖没报错`即可运行`src/main/java/org/apache/dubbo/demo/provider/Application.java`
+3. 然后项目根目录`mvn compile`编译项目，检查`/src/java下面的代码依赖没报错`即可运行`src/main/java/org/apache/dubbo/demo/Application.java`
 
 ## 2. 注意点
 

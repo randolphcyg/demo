@@ -21,7 +21,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.concurrent.CountDownLatch;
 
-@EnableDubbo(scanBasePackages = "org.apache.dubbo.demo.provider.impl")
+@EnableDubbo(scanBasePackages = "org.apache.dubbo.demo.impl")
 public class Application {
     public static void main(String[] args) throws Exception {
 
