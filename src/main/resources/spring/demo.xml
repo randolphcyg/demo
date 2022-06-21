@@ -28,6 +28,6 @@
     <dubbo:protocol id="grpc" name="grpc" port="8085"/>
     <!--  注册服务和接口  -->
     <bean id="helloImpl" class="org.apache.dubbo.demo.impl.Hello"/>
-    <dubbo:service interface="org.apache.dubbo.demo.DubbodemoServiceGrpc$IdemoService" ref="helloImpl" protocol="grpc"/>
+    <dubbo:service interface="org.apache.dubbo.demo.DubbooaClientGrpc$IoaClient" ref="helloImpl" protocol="grpc"/>
 
 </beans>

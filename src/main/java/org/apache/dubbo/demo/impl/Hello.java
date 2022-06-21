@@ -1,15 +1,17 @@
 package org.apache.dubbo.demo.impl;
 
 import io.grpc.stub.StreamObserver;
-import org.apache.dubbo.demo.DubbodemoServiceGrpc;
-import org.apache.dubbo.demo.HelloReply;
-import org.apache.dubbo.demo.HelloRequest;
+import org.apache.dubbo.demo.DubbooaClientGrpc;
+import org.apache.dubbo.demo.HelloReq;
+import org.apache.dubbo.demo.HelloResp;
 
-public class Hello extends DubbodemoServiceGrpc.demoServiceImplBase {
+public class Hello extends DubbooaClientGrpc.oaClientImplBase {
     @Override
-    public void sayHello(HelloRequest request, StreamObserver<HelloReply> responseObserver) {
-        System.out.println("Executing thread is " + Thread.currentThread().getName());
-        HelloReply reply = HelloReply.newBuilder().setMessage("Hello " + request.getName()).build();
+    public void sayHello(HelloReq request, StreamObserver<HelloResp> responseObserver) {
+        System.out.println("获取输入值： " + request.getName());
+        System.out.println("执行的线程是：" + Thread.currentThread().getName());
+
+        HelloResp reply = HelloResp.newBuilder().setMessage("返回值：" + request.getName() + " from dubbo3").build();
         responseObserver.onNext(reply);
         responseObserver.onCompleted();
     }

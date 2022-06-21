@@ -3,8 +3,8 @@
 
 package org.apache.dubbo.demo;
 
-public interface HelloRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:demo.HelloRequest)
+public interface HelloReqOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:oapb.HelloReq)
     com.google.protobuf.MessageOrBuilder {
 
   /**

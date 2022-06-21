@@ -17,43 +17,43 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  * <pre>
- * The demo service definition.
+ * rpc 客户端接口
  * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.34.1)",
     comments = "Source: demo.proto")
-public final class demoServiceGrpc {
+public final class oaClientGrpc {
 
-  private demoServiceGrpc() {}
+  private oaClientGrpc() {}
 
-  public static final String SERVICE_NAME = "demo.demoService";
+  public static final String SERVICE_NAME = "oapb.oaClient";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<org.apache.dubbo.demo.HelloRequest,
-      org.apache.dubbo.demo.HelloReply> getSayHelloMethod;
+  private static volatile io.grpc.MethodDescriptor<org.apache.dubbo.demo.HelloReq,
+      org.apache.dubbo.demo.HelloResp> getSayHelloMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "SayHello",
-      requestType = org.apache.dubbo.demo.HelloRequest.class,
-      responseType = org.apache.dubbo.demo.HelloReply.class,
+      requestType = org.apache.dubbo.demo.HelloReq.class,
+      responseType = org.apache.dubbo.demo.HelloResp.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<org.apache.dubbo.demo.HelloRequest,
-      org.apache.dubbo.demo.HelloReply> getSayHelloMethod() {
-    io.grpc.MethodDescriptor<org.apache.dubbo.demo.HelloRequest, org.apache.dubbo.demo.HelloReply> getSayHelloMethod;
-    if ((getSayHelloMethod = demoServiceGrpc.getSayHelloMethod) == null) {
-      synchronized (demoServiceGrpc.class) {
-        if ((getSayHelloMethod = demoServiceGrpc.getSayHelloMethod) == null) {
-          demoServiceGrpc.getSayHelloMethod = getSayHelloMethod =
-              io.grpc.MethodDescriptor.<org.apache.dubbo.demo.HelloRequest, org.apache.dubbo.demo.HelloReply>newBuilder()
+  public static io.grpc.MethodDescriptor<org.apache.dubbo.demo.HelloReq,
+      org.apache.dubbo.demo.HelloResp> getSayHelloMethod() {
+    io.grpc.MethodDescriptor<org.apache.dubbo.demo.HelloReq, org.apache.dubbo.demo.HelloResp> getSayHelloMethod;
+    if ((getSayHelloMethod = oaClientGrpc.getSayHelloMethod) == null) {
+      synchronized (oaClientGrpc.class) {
+        if ((getSayHelloMethod = oaClientGrpc.getSayHelloMethod) == null) {
+          oaClientGrpc.getSayHelloMethod = getSayHelloMethod =
+              io.grpc.MethodDescriptor.<org.apache.dubbo.demo.HelloReq, org.apache.dubbo.demo.HelloResp>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SayHello"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.apache.dubbo.demo.HelloRequest.getDefaultInstance()))
+                  org.apache.dubbo.demo.HelloReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  org.apache.dubbo.demo.HelloReply.getDefaultInstance()))
-              .setSchemaDescriptor(new demoServiceMethodDescriptorSupplier("SayHello"))
+                  org.apache.dubbo.demo.HelloResp.getDefaultInstance()))
+              .setSchemaDescriptor(new oaClientMethodDescriptorSupplier("SayHello"))
               .build();
         }
       }
@@ -64,58 +64,58 @@ public final class demoServiceGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static demoServiceStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<demoServiceStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<demoServiceStub>() {
+  public static oaClientStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<oaClientStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<oaClientStub>() {
         @java.lang.Override
-        public demoServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new demoServiceStub(channel, callOptions);
+        public oaClientStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new oaClientStub(channel, callOptions);
         }
       };
-    return demoServiceStub.newStub(factory, channel);
+    return oaClientStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static demoServiceBlockingStub newBlockingStub(
+  public static oaClientBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<demoServiceBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<demoServiceBlockingStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<oaClientBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<oaClientBlockingStub>() {
         @java.lang.Override
-        public demoServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new demoServiceBlockingStub(channel, callOptions);
+        public oaClientBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new oaClientBlockingStub(channel, callOptions);
         }
       };
-    return demoServiceBlockingStub.newStub(factory, channel);
+    return oaClientBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static demoServiceFutureStub newFutureStub(
+  public static oaClientFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<demoServiceFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<demoServiceFutureStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<oaClientFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<oaClientFutureStub>() {
         @java.lang.Override
-        public demoServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new demoServiceFutureStub(channel, callOptions);
+        public oaClientFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new oaClientFutureStub(channel, callOptions);
         }
       };
-    return demoServiceFutureStub.newStub(factory, channel);
+    return oaClientFutureStub.newStub(factory, channel);
   }
 
   /**
    * <pre>
-   * The demo service definition.
+   * rpc 客户端接口
    * </pre>
    */
-  public static abstract class demoServiceImplBase implements io.grpc.BindableService {
+  public static abstract class oaClientImplBase implements io.grpc.BindableService {
 
     /**
      */
-    public void sayHello(org.apache.dubbo.demo.HelloRequest request,
-        io.grpc.stub.StreamObserver<org.apache.dubbo.demo.HelloReply> responseObserver) {
+    public void sayHello(org.apache.dubbo.demo.HelloReq request,
+        io.grpc.stub.StreamObserver<org.apache.dubbo.demo.HelloResp> responseObserver) {
       asyncUnimplementedUnaryCall(getSayHelloMethod(), responseObserver);
     }
 
@@ -125,8 +125,8 @@ public final class demoServiceGrpc {
             getSayHelloMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                org.apache.dubbo.demo.HelloRequest,
-                org.apache.dubbo.demo.HelloReply>(
+                org.apache.dubbo.demo.HelloReq,
+                org.apache.dubbo.demo.HelloResp>(
                   this, METHODID_SAY_HELLO)))
           .build();
     }
@@ -134,25 +134,25 @@ public final class demoServiceGrpc {
 
   /**
    * <pre>
-   * The demo service definition.
+   * rpc 客户端接口
    * </pre>
    */
-  public static final class demoServiceStub extends io.grpc.stub.AbstractAsyncStub<demoServiceStub> {
-    private demoServiceStub(
+  public static final class oaClientStub extends io.grpc.stub.AbstractAsyncStub<oaClientStub> {
+    private oaClientStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected demoServiceStub build(
+    protected oaClientStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new demoServiceStub(channel, callOptions);
+      return new oaClientStub(channel, callOptions);
     }
 
     /**
      */
-    public void sayHello(org.apache.dubbo.demo.HelloRequest request,
-        io.grpc.stub.StreamObserver<org.apache.dubbo.demo.HelloReply> responseObserver) {
+    public void sayHello(org.apache.dubbo.demo.HelloReq request,
+        io.grpc.stub.StreamObserver<org.apache.dubbo.demo.HelloResp> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getSayHelloMethod(), getCallOptions()), request, responseObserver);
     }
@@ -160,24 +160,24 @@ public final class demoServiceGrpc {
 
   /**
    * <pre>
-   * The demo service definition.
+   * rpc 客户端接口
    * </pre>
    */
-  public static final class demoServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<demoServiceBlockingStub> {
-    private demoServiceBlockingStub(
+  public static final class oaClientBlockingStub extends io.grpc.stub.AbstractBlockingStub<oaClientBlockingStub> {
+    private oaClientBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected demoServiceBlockingStub build(
+    protected oaClientBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new demoServiceBlockingStub(channel, callOptions);
+      return new oaClientBlockingStub(channel, callOptions);
     }
 
     /**
      */
-    public org.apache.dubbo.demo.HelloReply sayHello(org.apache.dubbo.demo.HelloRequest request) {
+    public org.apache.dubbo.demo.HelloResp sayHello(org.apache.dubbo.demo.HelloReq request) {
       return blockingUnaryCall(
           getChannel(), getSayHelloMethod(), getCallOptions(), request);
     }
@@ -185,25 +185,25 @@ public final class demoServiceGrpc {
 
   /**
    * <pre>
-   * The demo service definition.
+   * rpc 客户端接口
    * </pre>
    */
-  public static final class demoServiceFutureStub extends io.grpc.stub.AbstractFutureStub<demoServiceFutureStub> {
-    private demoServiceFutureStub(
+  public static final class oaClientFutureStub extends io.grpc.stub.AbstractFutureStub<oaClientFutureStub> {
+    private oaClientFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected demoServiceFutureStub build(
+    protected oaClientFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new demoServiceFutureStub(channel, callOptions);
+      return new oaClientFutureStub(channel, callOptions);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<org.apache.dubbo.demo.HelloReply> sayHello(
-        org.apache.dubbo.demo.HelloRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<org.apache.dubbo.demo.HelloResp> sayHello(
+        org.apache.dubbo.demo.HelloReq request) {
       return futureUnaryCall(
           getChannel().newCall(getSayHelloMethod(), getCallOptions()), request);
     }
@@ -216,10 +216,10 @@ public final class demoServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final demoServiceImplBase serviceImpl;
+    private final oaClientImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(demoServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(oaClientImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -229,8 +229,8 @@ public final class demoServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SAY_HELLO:
-          serviceImpl.sayHello((org.apache.dubbo.demo.HelloRequest) request,
-              (io.grpc.stub.StreamObserver<org.apache.dubbo.demo.HelloReply>) responseObserver);
+          serviceImpl.sayHello((org.apache.dubbo.demo.HelloReq) request,
+              (io.grpc.stub.StreamObserver<org.apache.dubbo.demo.HelloResp>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -248,9 +248,9 @@ public final class demoServiceGrpc {
     }
   }
 
-  private static abstract class demoServiceBaseDescriptorSupplier
+  private static abstract class oaClientBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    demoServiceBaseDescriptorSupplier() {}
+    oaClientBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
@@ -259,21 +259,21 @@ public final class demoServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("demoService");
+      return getFileDescriptor().findServiceByName("oaClient");
     }
   }
 
-  private static final class demoServiceFileDescriptorSupplier
-      extends demoServiceBaseDescriptorSupplier {
-    demoServiceFileDescriptorSupplier() {}
+  private static final class oaClientFileDescriptorSupplier
+      extends oaClientBaseDescriptorSupplier {
+    oaClientFileDescriptorSupplier() {}
   }
 
-  private static final class demoServiceMethodDescriptorSupplier
-      extends demoServiceBaseDescriptorSupplier
+  private static final class oaClientMethodDescriptorSupplier
+      extends oaClientBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
-    demoServiceMethodDescriptorSupplier(String methodName) {
+    oaClientMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 
@@ -288,11 +288,11 @@ public final class demoServiceGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (demoServiceGrpc.class) {
+      synchronized (oaClientGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new demoServiceFileDescriptorSupplier())
+              .setSchemaDescriptor(new oaClientFileDescriptorSupplier())
               .addMethod(getSayHelloMethod())
               .build();
         }

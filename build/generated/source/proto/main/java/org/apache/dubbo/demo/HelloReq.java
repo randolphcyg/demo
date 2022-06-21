@@ -8,18 +8,18 @@ package org.apache.dubbo.demo;
  * 请求体
  * </pre>
  *
- * Protobuf type {@code demo.HelloRequest}
+ * Protobuf type {@code oapb.HelloReq}
  */
-public  final class HelloRequest extends
+public  final class HelloReq extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:demo.HelloRequest)
-    HelloRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:oapb.HelloReq)
+    HelloReqOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use HelloRequest.newBuilder() to construct.
-  private HelloRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use HelloReq.newBuilder() to construct.
+  private HelloReq(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private HelloRequest() {
+  private HelloReq() {
     name_ = "";
   }
 
@@ -28,7 +28,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private HelloRequest(
+  private HelloReq(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -74,15 +74,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return org.apache.dubbo.demo.demoProto.internal_static_demo_HelloRequest_descriptor;
+    return org.apache.dubbo.demo.demoProto.internal_static_oapb_HelloReq_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return org.apache.dubbo.demo.demoProto.internal_static_demo_HelloRequest_fieldAccessorTable
+    return org.apache.dubbo.demo.demoProto.internal_static_oapb_HelloReq_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            org.apache.dubbo.demo.HelloRequest.class, org.apache.dubbo.demo.HelloRequest.Builder.class);
+            org.apache.dubbo.demo.HelloReq.class, org.apache.dubbo.demo.HelloReq.Builder.class);
   }
 
   public static final int NAME_FIELD_NUMBER = 1;
@@ -158,10 +158,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof org.apache.dubbo.demo.HelloRequest)) {
+    if (!(obj instanceof org.apache.dubbo.demo.HelloReq)) {
       return super.equals(obj);
     }
-    org.apache.dubbo.demo.HelloRequest other = (org.apache.dubbo.demo.HelloRequest) obj;
+    org.apache.dubbo.demo.HelloReq other = (org.apache.dubbo.demo.HelloReq) obj;
 
     if (!getName()
         .equals(other.getName())) return false;
@@ -183,69 +183,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static org.apache.dubbo.demo.HelloRequest parseFrom(
+  public static org.apache.dubbo.demo.HelloReq parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.apache.dubbo.demo.HelloRequest parseFrom(
+  public static org.apache.dubbo.demo.HelloReq parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.apache.dubbo.demo.HelloRequest parseFrom(
+  public static org.apache.dubbo.demo.HelloReq parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.apache.dubbo.demo.HelloRequest parseFrom(
+  public static org.apache.dubbo.demo.HelloReq parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.apache.dubbo.demo.HelloRequest parseFrom(byte[] data)
+  public static org.apache.dubbo.demo.HelloReq parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static org.apache.dubbo.demo.HelloRequest parseFrom(
+  public static org.apache.dubbo.demo.HelloReq parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static org.apache.dubbo.demo.HelloRequest parseFrom(java.io.InputStream input)
+  public static org.apache.dubbo.demo.HelloReq parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static org.apache.dubbo.demo.HelloRequest parseFrom(
+  public static org.apache.dubbo.demo.HelloReq parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static org.apache.dubbo.demo.HelloRequest parseDelimitedFrom(java.io.InputStream input)
+  public static org.apache.dubbo.demo.HelloReq parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static org.apache.dubbo.demo.HelloRequest parseDelimitedFrom(
+  public static org.apache.dubbo.demo.HelloReq parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static org.apache.dubbo.demo.HelloRequest parseFrom(
+  public static org.apache.dubbo.demo.HelloReq parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static org.apache.dubbo.demo.HelloRequest parseFrom(
+  public static org.apache.dubbo.demo.HelloReq parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -258,7 +258,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(org.apache.dubbo.demo.HelloRequest prototype) {
+  public static Builder newBuilder(org.apache.dubbo.demo.HelloReq prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -278,26 +278,26 @@ private static final long serialVersionUID = 0L;
    * 请求体
    * </pre>
    *
-   * Protobuf type {@code demo.HelloRequest}
+   * Protobuf type {@code oapb.HelloReq}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:demo.HelloRequest)
-      org.apache.dubbo.demo.HelloRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:oapb.HelloReq)
+      org.apache.dubbo.demo.HelloReqOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.dubbo.demo.demoProto.internal_static_demo_HelloRequest_descriptor;
+      return org.apache.dubbo.demo.demoProto.internal_static_oapb_HelloReq_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.dubbo.demo.demoProto.internal_static_demo_HelloRequest_fieldAccessorTable
+      return org.apache.dubbo.demo.demoProto.internal_static_oapb_HelloReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              org.apache.dubbo.demo.HelloRequest.class, org.apache.dubbo.demo.HelloRequest.Builder.class);
+              org.apache.dubbo.demo.HelloReq.class, org.apache.dubbo.demo.HelloReq.Builder.class);
     }
 
-    // Construct using org.apache.dubbo.demo.HelloRequest.newBuilder()
+    // Construct using org.apache.dubbo.demo.HelloReq.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -323,17 +323,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return org.apache.dubbo.demo.demoProto.internal_static_demo_HelloRequest_descriptor;
+      return org.apache.dubbo.demo.demoProto.internal_static_oapb_HelloReq_descriptor;
     }
 
     @java.lang.Override
-    public org.apache.dubbo.demo.HelloRequest getDefaultInstanceForType() {
-      return org.apache.dubbo.demo.HelloRequest.getDefaultInstance();
+    public org.apache.dubbo.demo.HelloReq getDefaultInstanceForType() {
+      return org.apache.dubbo.demo.HelloReq.getDefaultInstance();
     }
 
     @java.lang.Override
-    public org.apache.dubbo.demo.HelloRequest build() {
-      org.apache.dubbo.demo.HelloRequest result = buildPartial();
+    public org.apache.dubbo.demo.HelloReq build() {
+      org.apache.dubbo.demo.HelloReq result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -341,8 +341,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public org.apache.dubbo.demo.HelloRequest buildPartial() {
-      org.apache.dubbo.demo.HelloRequest result = new org.apache.dubbo.demo.HelloRequest(this);
+    public org.apache.dubbo.demo.HelloReq buildPartial() {
+      org.apache.dubbo.demo.HelloReq result = new org.apache.dubbo.demo.HelloReq(this);
       result.name_ = name_;
       onBuilt();
       return result;
@@ -382,16 +382,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof org.apache.dubbo.demo.HelloRequest) {
-        return mergeFrom((org.apache.dubbo.demo.HelloRequest)other);
+      if (other instanceof org.apache.dubbo.demo.HelloReq) {
+        return mergeFrom((org.apache.dubbo.demo.HelloReq)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(org.apache.dubbo.demo.HelloRequest other) {
-      if (other == org.apache.dubbo.demo.HelloRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(org.apache.dubbo.demo.HelloReq other) {
+      if (other == org.apache.dubbo.demo.HelloReq.getDefaultInstance()) return this;
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
         onChanged();
@@ -411,11 +411,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      org.apache.dubbo.demo.HelloRequest parsedMessage = null;
+      org.apache.dubbo.demo.HelloReq parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (org.apache.dubbo.demo.HelloRequest) e.getUnfinishedMessage();
+        parsedMessage = (org.apache.dubbo.demo.HelloReq) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -506,41 +506,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:demo.HelloRequest)
+    // @@protoc_insertion_point(builder_scope:oapb.HelloReq)
   }
 
-  // @@protoc_insertion_point(class_scope:demo.HelloRequest)
-  private static final org.apache.dubbo.demo.HelloRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:oapb.HelloReq)
+  private static final org.apache.dubbo.demo.HelloReq DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new org.apache.dubbo.demo.HelloRequest();
+    DEFAULT_INSTANCE = new org.apache.dubbo.demo.HelloReq();
   }
 
-  public static org.apache.dubbo.demo.HelloRequest getDefaultInstance() {
+  public static org.apache.dubbo.demo.HelloReq getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<HelloRequest>
-      PARSER = new com.google.protobuf.AbstractParser<HelloRequest>() {
+  private static final com.google.protobuf.Parser<HelloReq>
+      PARSER = new com.google.protobuf.AbstractParser<HelloReq>() {
     @java.lang.Override
-    public HelloRequest parsePartialFrom(
+    public HelloReq parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new HelloRequest(input, extensionRegistry);
+      return new HelloReq(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<HelloRequest> parser() {
+  public static com.google.protobuf.Parser<HelloReq> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<HelloRequest> getParserForType() {
+  public com.google.protobuf.Parser<HelloReq> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public org.apache.dubbo.demo.HelloRequest getDefaultInstanceForType() {
+  public org.apache.dubbo.demo.HelloReq getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

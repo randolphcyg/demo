@@ -5,19 +5,19 @@ option java_package = "org.apache.dubbo.demo";
 option java_outer_classname = "demoProto";
 option objc_class_prefix = "demo";
 
-package demo;
+package oapb;
 
 // 请求体
-message HelloRequest {
+message HelloReq {
   string name = 1;
 }
 
 // 响应体
-message HelloReply {
+message HelloResp {
   string message = 1;
 }
 
-// The demo service definition.
-service demoService {
-  rpc SayHello (HelloRequest) returns (HelloReply) {}
+// rpc 客户端接口
+service oaClient {
+  rpc SayHello (HelloReq) returns (HelloResp) {}
 }
